@@ -31,8 +31,8 @@ let mySprite = sprites.create(img`
     ........................
     `, SpriteKind.Player)
 controller.moveSprite(mySprite)
-mySprite.x = 20
-mySprite.y = 110
+mySprite.x = 15
+mySprite.y = 100
 let myEnemy = sprites.create(img`
     . . . . . . f f f f 4 4 f . . . 
     . . . . f f b f 5 4 5 5 4 f . . 
@@ -51,24 +51,7 @@ let myEnemy = sprites.create(img`
     . . . . f f d 1 d 1 d 1 f f . . 
     . . . . . . f f b b f f . . . . 
     `, SpriteKind.Enemy)
-myEnemy.x = 110
-myEnemy.y = 20
+myEnemy.x = 140
+myEnemy.y = 40
 myEnemy.follow(mySprite)
-tiles.setTilemap(tiles.createTilemap(hex`1000100001010101010101010101010101010101010000000000000000000000000000010100010303030303030300030303000101000200000000000004000000000001010002000103030300040003070600010100020000000000000400000000000101070100080807050004000003030001010000000000000000070707040000010100000007070707000000000400040101000400000000050303030004000401010004000707070700000000040004010100060000000000000000000000000101000303030303030303030500040001010000000000000000000004000400010104000400040004000400040004000101010101010101010101010101010101`, img`
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-    2 . . . . . . . . . . . . . . 2 
-    2 . 2 2 2 2 2 2 2 2 . 2 2 2 . 2 
-    2 . 2 . . . . . . 2 . . . . . 2 
-    2 . 2 . 2 2 2 2 . 2 . 2 2 2 . 2 
-    2 . 2 . . . . . . 2 . . . . . 2 
-    2 2 2 . 2 2 2 2 . 2 . . 2 2 . 2 
-    2 . . . . . . . . 2 2 2 2 . . 2 
-    2 . . . 2 2 2 2 . . . . 2 . 2 2 
-    2 . 2 . . . . 2 2 2 2 . 2 . 2 2 
-    2 . 2 . 2 2 2 2 . . . . 2 . 2 2 
-    2 . 2 . . . . . . . . . . . . 2 
-    2 . 2 2 2 2 2 2 2 2 2 2 . 2 . 2 
-    2 . . . . . . . . . . 2 . 2 . 2 
-    2 2 . 2 . 2 . 2 . 2 . 2 . 2 . 2 
-    2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-    `, [myTiles.transparency16,sprites.dungeon.darkGroundNorthWest0,sprites.dungeon.darkGroundWest,sprites.dungeon.darkGroundNorth,sprites.dungeon.darkGroundEast,sprites.dungeon.darkGroundNorthEast0,sprites.dungeon.darkGroundSouthEast0,sprites.dungeon.darkGroundSouth,sprites.dungeon.darkGroundSouthWest0], TileScale.Sixteen))
+tiles.setTilemap(tilemap`level2`)
